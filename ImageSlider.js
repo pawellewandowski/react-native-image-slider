@@ -1,8 +1,8 @@
+import React, {Component} from 'react'
 import React, {
     Image,
     Text,
     View,
-    Component,
     StyleSheet,
     Animated,
     PanResponder,
