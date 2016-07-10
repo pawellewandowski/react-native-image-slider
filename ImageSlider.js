@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import React, {
+import {
     Image,
     Text,
     View,
