@@ -13,7 +13,7 @@ import {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        backgroundColor: '#222'
+        backgroundColor: '#fff'
     },
     image: {
         width: Dimensions.get('window').width
@@ -31,12 +31,12 @@ const styles = StyleSheet.create({
         width: 8,
         height: 8,
         borderRadius: 8 / 2,
-        backgroundColor: '#ccc',
+        backgroundColor: '#204b8e',
         opacity: 0.9
     },
     buttonSelected: {
         opacity: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#000',
     }
 });
 
