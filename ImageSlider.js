@@ -45,7 +45,7 @@ export default class ImageSlider extends Component {
         super(props);
 
         this.state = {
-            position: 0,
+            position: this.props.position ? this.props.position : 0,
             height: Dimensions.get('window').width * (4 / 9),
             left: new Animated.Value(0)
         };
