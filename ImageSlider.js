@@ -56,7 +56,9 @@ export default class ImageSlider extends Component {
         Animated.spring(this.state.left, {toValue: index * -width, friction: 10, tension: 50}).start();
         this.setState({position: index});
     }
-
+    _resetPosition(){
+        this.setState({position: 0});
+    }
     componentWillMount() {
         let release = (e, gestureState) => {
             let width = Dimensions.get('window').width;
