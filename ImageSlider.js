@@ -57,7 +57,7 @@ export default class ImageSlider extends Component {
         this.setState({position: index});
     }
     _resetPosition(){
-        this._move(1);
+        this._move(0);
     }
     componentWillMount() {
         let release = (e, gestureState) => {
