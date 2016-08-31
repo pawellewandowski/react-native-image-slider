@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff'
     },
     image: {
-        width: 100
+        width: Dimensions.get('window').width
     },
     buttons: {
         height: 15,
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         width: 8,
         height: 8,
         borderRadius: 8 / 2,
-        backgroundColor: '#fff',
+        backgroundColor: '#204b8e',
         opacity: 0.9
     },
     buttonSelected: {
