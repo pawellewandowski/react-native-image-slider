@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         width: 8,
         height: 8,
         borderRadius: 8 / 2,
-        backgroundColor: '#204b8e',
+        backgroundColor: '#fff',
         opacity: 0.9
     },
     buttonSelected: {
