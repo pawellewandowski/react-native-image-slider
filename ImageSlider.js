@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff'
     },
     image: {
-        width: Dimensions.get('window').width
+        width: Dimensions.get('window').width - 20
     },
     buttons: {
         height: 15,
@@ -105,7 +105,7 @@ export default class ImageSlider extends Component {
                 style={[styles.container, {height: height, width: width * this.props.images.length, transform: [{translateX: this.state.left}]}]}
                 {...this._panResponder.panHandlers}>
                     {this.props.images.map((image, index) => {
-                        return (<Image key={index} source={{uri: image}} style={[styles.image, {width: width - 10}]}/>)
+                        return (<Image key={index} source={{uri: image}} style={[styles.image]}/>)
                     })}
             </Animated.View>
             <View style={styles.buttons}>
