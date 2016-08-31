@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff'
     },
     image: {
-        width: Dimensions.get('window').width - 20
+        width: 100
     },
     buttons: {
         height: 15,
