@@ -97,6 +97,20 @@ export default class ImageSlider extends Component {
         console.log('Position'+this.state.position);
         let width = Dimensions.get('window').width;
         let height = this.props.height || this.state.height;
+        var elem = (<View />);
+        if(this.props.images.length>1){
+            elem = (<View style={styles.buttons}>
+                {this.props.images.map((image, index) => {
+                    return (<TouchableHighlight
+                        key={index}
+                        underlayColor="#ccc"
+                        onPress={() => this._move(index)}
+                        style={[styles.button, this.state.position === index && styles.buttonSelected]}>
+                        <View></View>
+                    </TouchableHighlight>);
+                })}
+            </View>);
+        }
         return (<View>
             <Animated.View
                 style={[styles.container, {height: height, width: width * this.props.images.length, transform: [{translateX: this.state.left}]}]}
@@ -105,17 +119,7 @@ export default class ImageSlider extends Component {
                         return (<Image key={index} source={{uri: image}} style={{width: width}} resizeMode='contain' />)
                     })}
             </Animated.View>
-            <View style={styles.buttons}>
-                {this.props.images.map((image, index) => {
-                    return (<TouchableHighlight
-                        key={index}
-                        underlayColor="#ccc"
-                        onPress={() => this._move(index)}
-                        style={[styles.button, this.state.position === index && styles.buttonSelected]}>
-                            <View></View>
-                    </TouchableHighlight>);
-                })}
-            </View>
+            {elem}
         </View>);
     }
 }
